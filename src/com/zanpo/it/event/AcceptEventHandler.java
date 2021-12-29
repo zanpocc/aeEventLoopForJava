@@ -21,8 +21,8 @@ public class AcceptEventHandler extends AbsEventHandler {
         try {
             SocketChannel clientChannel = serverSocketChannel.accept();
             clientChannel.configureBlocking(false);
-            System.out.println("接收到新连接:"+clientChannel.getRemoteAddress());
-            aeEventLoop.aeCreateFileEvent(clientChannel, EventType.AE_READ,new SimpleReadEventHandler(),null);
+            System.out.println("接收到新连接:" + clientChannel.getRemoteAddress());
+            aeEventLoop.aeCreateFileEvent(clientChannel, EventType.AE_READ, new SimpleReadEventHandler(), null);
         } catch (IOException e) {
             e.printStackTrace();
         }

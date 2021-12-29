@@ -20,7 +20,7 @@ public class SimpleReadEventHandler extends AbsEventHandler {
             int length = socketChannel.read(byteBuffer);
             byte[] data = new byte[length];
             byteBuffer.flip();
-            byteBuffer.get(data,0,data.length);
+            byteBuffer.get(data, 0, data.length);
             System.out.print(new String(data));
         } catch (IOException e) {
             e.printStackTrace();

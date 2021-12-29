@@ -10,7 +10,6 @@ import java.nio.channels.spi.AbstractSelectableChannel;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -96,7 +95,7 @@ public class AeEventLoop {
 
             // 处理消息
             Iterator<AeFiredEvent> iterator = firedEvents.iterator();
-            while(iterator.hasNext()){
+            while (iterator.hasNext()) {
                 AeFiredEvent firedEvent = iterator.next();
                 int eventType = firedEvent.getEventType();
                 AbstractSelectableChannel s = firedEvent.getS();
